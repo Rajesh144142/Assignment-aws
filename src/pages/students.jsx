@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { 
   CTable, 
   CTableHead, 
@@ -14,11 +13,13 @@ import {
   CContainer, 
   CAlert, 
   CFormSelect, 
-  CButton 
+  CButton, 
+  CSpinner 
 } from "@coreui/react";
 import { CSmartPagination } from '@coreui/react-pro';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './Students.css'; // Import custom CSS
+import { getAllStudents } from '../helpers/apiHelpers';
 
 const Students = () => {
     const [studentsList, setStudentsList] = useState([]);
@@ -32,8 +33,9 @@ const Students = () => {
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/get-users');  
-                setStudentsList(response.data.students || []); // Handle case where students might be undefined
+                const response = await getAllStudents();  
+                console.log(response);
+                setStudentsList(response?.students || []); // Handle case where students might be undefined
             } catch (err) {
                 setError('Failed to fetch students'); // Set error message
                 console.error(err); // Log error for debugging
@@ -69,9 +71,7 @@ const Students = () => {
                 <CCardBody>
                     {loading ? (
                         <div className="text-center">
-                            <CButton color="primary" disabled>
-                                Loading...
-                            </CButton>
+                            <CSpinner color="primary" />
                         </div>
                     ) : (
                         <>

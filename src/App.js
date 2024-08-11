@@ -5,7 +5,7 @@ import config from './amplifyconfiguration.json';
 import Students from './pages/students';
 import { CContainer, CButton } from '@coreui/react';
 import './App.css'; // Import custom CSS for styling
-
+import {host} from './configuration/apiConfig'
 Amplify.configure(config);
 
 export function App({ signOut }) {
