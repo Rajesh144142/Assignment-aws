@@ -2,6 +2,7 @@ import {createBrowserRouter } from "react-router-dom";
 import StudentDetails from "../pages/studentDetails";
 import Auth from "../pages/auth";
 import App from '../App';
+import '@coreui/coreui/dist/css/coreui.min.css';
  const router = createBrowserRouter(
     [ 
         {
@@ -9,7 +10,7 @@ import App from '../App';
         element: <App/>,
         },
         {
-         path: "/:id",
+         path: "/students/:id",
          element: <StudentDetails/>,
         }
         , {

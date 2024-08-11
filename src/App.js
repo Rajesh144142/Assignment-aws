@@ -3,15 +3,19 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
 import Students from './pages/students';
+import { CContainer, CButton } from '@coreui/react';
+import './App.css'; // Import custom CSS for styling
+
 Amplify.configure(config);
 
-export function App({ signOut, user }) {
+export function App({ signOut }) {
   return (
-    <>
-      <Students/>
-      <h1>Hello {user?.username}</h1>
-      <button onClick={signOut}>Sign out</button>
-    </>
+    <CContainer className="app-container">
+      <div className="header">
+        <CButton color="danger" onClick={signOut}>Sign out</CButton>
+      </div>
+      <Students />
+    </CContainer>
   );
 }
 

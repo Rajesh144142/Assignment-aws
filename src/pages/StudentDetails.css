@@ -1,0 +1,44 @@
+/* Custom styles for the StudentDetails component */
+.student-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #f8f9fa; /* Light background color for the card */
+}
+
+.student-card-header {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.student-card-body {
+    padding: 2rem;
+}
+
+.info-section {
+    margin-bottom: 1.5rem;
+    background: #ffffff; /* White background for sections */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.info-section h5 {
+    color: #007bff; /* Primary color for section titles */
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.info-item {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.info-item strong {
+    color: #007bff; /* Primary color for labels */
+}

@@ -1,0 +1,29 @@
+/* Custom styles for the Students component */
+.students-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #ffffff; /* White background for card */
+}
+
+.students-card-header {
+    background-color: #007bff; /* Primary color */
+    color: #ffffff;
+    padding: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.students-table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.page-size-select {
+    max-width: 150px;
+}
+
+.pagination {
+    margin-top: 1rem;
+}

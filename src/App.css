@@ -1,0 +1,29 @@
+/* Custom styles for the App component */
+.app-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #ffffff; /* White background for header */
+    border-bottom: 1px solid #dee2e6; /* Light border for separation */
+  }
+  
+  .header .btn {
+    margin: 0; /* Remove default margin for button */
+  }
+  
+  .students-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+  }
+  
